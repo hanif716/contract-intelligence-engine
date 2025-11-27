@@ -1,0 +1,43 @@
+flowchart LR
+    subgraph UserSide["User Side"]
+        USER["Contract Manager"]
+        FE["Frontend Interface"]
+    end
+
+    subgraph Backend["Backend API - FastAPI or Node"]
+        API["REST API Layer"]
+        INGEST["Document Ingestion"]
+        PREP["Text Preprocessing and Chunking"]
+        RAG["RAG Query Engine"]
+        RISK["Risk Analysis Engine"]
+        REPORT["Report Generator"]
+        LOG["Audit and Logs"]
+    end
+
+    subgraph Data["AI and Data Stores"]
+        LLM["LLM Provider"]
+        VDB["Vector Database"]
+        STDCLS["Standard Clause Library"]
+        META["Contract Metadata"]
+    end
+
+    USER --> FE
+    FE --> API
+
+    API --> INGEST
+    INGEST --> PREP
+    PREP --> VDB
+
+    API --> RAG
+    RAG --> VDB
+    RAG --> LLM
+
+    RAG --> RISK
+    RISK --> STDCLS
+    RISK --> META
+
+    RISK --> REPORT
+    REPORT --> API --> FE
+
+    API --> LOG
+    RISK --> LOG
