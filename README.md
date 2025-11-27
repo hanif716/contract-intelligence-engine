@@ -142,19 +142,5 @@ Additional setup instructions will be added as development progresses.
 
 ---
 
-## 💡 Why This Project Matters (For Assessors)
-This project demonstrates:
-
-- **Innovation**: applying RAG to procurement/legal contracts  
-- **Advanced AI engineering**: embeddings, retrieval, reasoning  
-- **Real-world impact**: improved contract clarity and risk control  
-- **Technical contribution**: documentation, architecture, research  
-
-Supports:
-- Mandatory Criterion: *Innovation*  
-- Optional Criterion: *Technical Contribution*  
-
----
-
 ## 📜 License
 MIT License.
